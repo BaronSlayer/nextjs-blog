@@ -2,10 +2,10 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const name = 'First Last';
-export const siteTitle = 'Next.js Website';
+const name = 'Имя Фамилия';
+export const siteTitle = 'Next.js Sample Website';
 
-function Layout({ children, home }) {
+function Layout({ children, home }: {children: React.ReactNode; home?: boolean}) {
   return (
     <div className="container">
       <style jsx>
@@ -101,7 +101,7 @@ function Layout({ children, home }) {
       {!home && (
         <div className="backToHome">
           <Link href="/">
-            <a>Back to home</a>
+            <a>&larr; Back to home</a>
           </Link>
         </div>
       )}
